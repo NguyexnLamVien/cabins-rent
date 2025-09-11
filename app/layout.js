@@ -8,6 +8,7 @@ import Header from "./_components/Header";
 // });
 
 import "@/app/_styles/globals.css";
+import { ReservationProvider } from "./_context/ReservationContext";
 
 export const metadata = {
   title: {
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
         <Header />
         <div className="flex-1 px-8 py-12  ">
           <main className=" mx-auto max-w-7xl text-white ">
-            {children}
+            <ReservationProvider>{children}</ReservationProvider>
           </main>
         </div>
       </body>
