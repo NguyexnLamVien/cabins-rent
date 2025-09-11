@@ -10,8 +10,6 @@ export default function ReservationList({ bookings }) {
         bookings,
         (curBookings, bookingId) => {
             return curBookings.filter((booking) => booking.id !== bookingId);
-
-
         }
     );
 
@@ -23,7 +21,7 @@ export default function ReservationList({ bookings }) {
 
     return (
         <ul className="space-y-6">
-            {bookings.map((booking) => (
+            {optimisticBookings.map((booking) => (
                 <ReservationCard
                     booking={booking}
                     key={booking.id}
